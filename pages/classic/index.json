@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "流行",
+  "usingComponents": {
+    "like-cmp": "/components/like/index",
+    "date-time-cmp": "/components/date-time/index",
+    "movie-cmp": "/components/classic/movie/index",
+    "music-cmp": "/components/classic/music/index",
+    "essay-cmp": "/components/classic/essay/index",
+    "navi-cmp": "/components/navi/index",
+    "image-button-cmp": "/components/image-button/index"
+  }
+}

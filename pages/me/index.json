@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "喜欢",
+  "usingComponents": {
+    "image-button-cmp": "/components/image-button/index",
+    "like-book-cmp":"/components/like-book/index"
+  }
+}

@@ -1,0 +1,13 @@
+<!--components/like-book/index.wxml-->
+<view bindtap='onLikeBook' class='container'>
+  <view class='item-head'>
+    <text wx:if="{{movie}}" class='item-type'>电影</text>
+    <text wx:if="{{music}}" class='item-type'>音乐</text>
+    <text wx:if="{{essay}}" class='item-type'>句子</text>
+    <like-cmp like="{{book.like_status==1}}" count="{{book.fav_nums}}" />
+  </view>
+  <image wx:if="{{movie||essay}}" class='item-img' src='{{book.image}}' />
+  <image wx:if="{{music}}" class='item-img2' src='{{book.image}}' />
+  <view wx:if="{{music}}" class='item-img-cricle' />
+  <text class='item-text'>{{book.content}}</text>
+</view>

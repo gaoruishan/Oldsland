@@ -1,0 +1,13 @@
+<!--components/date-time/index.wxml-->
+<view class='container'>
+  <view class='flex-baseline'>
+    <text>No.</text>
+    <text class='container-index'>{{_index}}</text>
+    <view class='vertical-line' />
+  </view>
+  <view class='date'>
+    <text class='month'>{{month}}</text>
+    <text class='year'>{{year}}</text>
+  </view>
+
+</view>

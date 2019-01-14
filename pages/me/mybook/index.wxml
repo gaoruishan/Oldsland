@@ -1,0 +1,6 @@
+<!--pages/me/mybook/index.wxml-->
+<view class='container'>
+  <block wx:for="{{bookList}}">
+    <book-item-cmp class="book-item" />
+  </block>
+</view>

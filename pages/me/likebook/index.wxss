@@ -1,0 +1,15 @@
+/* pages/me/likebook/index.wxss */
+
+@import "../../classic/index.wxss"
+.item-title {
+  position: absolute;
+  bottom: 120rpx;
+  width: 560rpx;
+  height: 70rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3rpx;
+  justify-content: center;
+}

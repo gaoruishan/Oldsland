@@ -1,0 +1,17 @@
+
+var format = function(txt){
+    if(txt){
+      //正则表达式 获取全局的\n 
+      var reg = getRegExp("\n", "g");
+      return txt.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+    }
+    return ""
+}
+//截取数组 array.slice(start,end)
+var limit = function(arr,length){
+  return arr.slice(0,length);
+}
+module.exports={
+  format: format,
+  limit: limit,
+}

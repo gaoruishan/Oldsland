@@ -1,0 +1,6 @@
+<!--components/navi/index.wxml-->
+<view class='container'>
+  <image bindtap='onLeft' src='{{last? left_icon_dis:left_icon}}'/>
+  <text>{{title}}</text>
+  <image bindtap='onRight' src='{{first? right_icon_dis:right_icon}}'/>
+</view>

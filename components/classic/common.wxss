@@ -1,0 +1,29 @@
+/* 公共相同的样式 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+    /* 交叉轴对齐 */
+  align-items: center;
+  /* 主轴对齐 *//* justify-content: center */
+}
+
+.img {
+  width: 100%;
+  height: 500rpx;
+}
+
+.img-tag {
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  bottom: 71rpx;
+  right: 260rpx;
+}
+
+.container text {
+  display: block;
+  font-size: 36rpx;
+  max-width: 550rpx;
+  letter-spacing: 3rpx;
+}

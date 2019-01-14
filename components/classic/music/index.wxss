@@ -1,0 +1,38 @@
+/* components/classic/music/index.wxss */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 420rpx;
+  height: 420rpx;
+  margin-top: 35rpx;
+  border-radius: 50%;
+}
+.play-icon{
+  width: 120rpx;
+  height: 120rpx;
+  /* 相对定位: 以当前元素的中心点,相对于自己位置,距离其他元素的位置 */
+  position: relative;
+  /* 当前向上偏移 用负数 420/2= 210 + 120/2 =270*/
+  top: -270rpx;
+}
+.img-tag {
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  top: -120rpx;
+  left: -260rpx;
+}
+.txt{
+  display: block;
+  font-size: 36rpx;
+  max-width: 550rpx;
+  margin-top: -60rpx;
+}
+
+

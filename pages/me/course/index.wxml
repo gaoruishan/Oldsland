@@ -1,0 +1,2 @@
+<!--pages/me/mybook/index.wxml-->
+<image class="container"  src='/images/my/course.png' />

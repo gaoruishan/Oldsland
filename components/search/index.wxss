@@ -1,0 +1,111 @@
+/* components/search/index.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container text {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.search-bar {
+  width: 100%;
+  height: 105rpx;
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  z-index: 99;
+}
+
+.search-input {
+  height: 66rpx;
+  width: 65%;
+  border-radius: 33rpx;
+  display: flex;
+  background-color: #f8f8f8;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.search-cancel {
+  height: 66rpx;
+  width: 15%;
+  border-radius: 35rpx;
+  border: 1rpx solid gainsboro;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-search {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 15rpx;
+}
+
+.icon-delete {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 15rpx;
+  margin-left: 70rpx;
+}
+
+.book-list {
+  margin-top: 130rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 130rpx 80rpx 20rpx 80rpx;
+}
+
+.history {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  top: 105rpx;
+  padding-top: 30rpx;
+  background-color: white;
+}
+
+.history-tag {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.history-list {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.tag {
+  height: 35rpx;
+  width: 10rpx;
+  background-color: black;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+}

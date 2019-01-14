@@ -1,0 +1,9 @@
+<!--components/book-item/index.wxml-->
+<view class='container'>
+  <image class='item-image' src='https://img3.doubanio.com/lpic/s3435132.jpg'></image>
+  <view class='item-content'>
+    <text class='item-title'>Python源码剖析</text>
+    <text class='item-name'>陈儒</text>
+  </view>
+   <image  class='item-like' src="{{like?yes_url:no_url}}"/>
+</view>

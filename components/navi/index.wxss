@@ -1,0 +1,17 @@
+/* components/navi/index.wxss */
+.container{
+  width: 600rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 2rpx;
+  justify-content: space-between;
+}
+.container image{
+  width: 76rpx;
+  height: 76rpx;
+}
+text{
+  letter-spacing: 3rpx;
+}

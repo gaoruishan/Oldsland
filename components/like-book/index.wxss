@@ -1,0 +1,62 @@
+/* components/like-book/index.wxss */
+
+.container {
+  width: 330rpx;
+  height: 480rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 0 3rpx #e2e2e2;
+}
+
+.item-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.item-type {
+  width: 80rpx;
+  height: 40rpx;
+  border-radius: 2rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.item-img {
+  width: 330rpx;
+  height: 250rpx;
+  margin-bottom: 30rpx;
+}
+
+.item-img2 {
+  width: 220rpx;
+  height: 220rpx;
+  overflow: hidden;
+  border-radius: 110rpx;
+  margin: 0 auto;
+}
+
+.item-img-cricle {
+  position: relative;
+  top: -142rpx;
+  width: 64rpx;
+  height: 64rpx;
+  overflow: hidden;
+  border-radius: 32rpx;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.item-text {
+  margin: 0 20rpx;
+  font-size: 26rpx;
+  color: #999;
+  letter-spacing: 3rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

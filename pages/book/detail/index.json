@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "详情页",
+  "usingComponents": {
+    "book-tag-cmp": "/components/book-tag/index",
+    "like-cmp": "/components/like/index",
+    "loading-cmp": "/components/loading/index",
+    "image-button-cmp": "/components/image-button/index"
+  }
+}

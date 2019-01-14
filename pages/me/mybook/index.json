@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的书单",
+  "usingComponents": {
+    "book-item-cmp": "/components/book-item/index"
+  }
+}

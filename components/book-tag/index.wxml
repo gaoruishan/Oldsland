@@ -1,0 +1,25 @@
+<!--components/book-detail/index.wxml-->
+<view>
+  <!-- 有数字的 -->
+  <view wx:if="{{num}}">
+    <view wx:if="{{num.length>3}}" class='container2'>
+      <text bindtap='bindtext' class='text'>{{text}}</text>
+      <text class='text-num'>{{num}}</text>
+    </view>
+
+    <view wx:if="{{num.length==3}}" class='container1'>
+      <text bindtap='bindtext' class='text'>{{text}}</text>
+      <text class='text-num'>{{num}}</text>
+    </view>
+
+    <view wx:if="{{num.length<3}}" class='container'>
+      <text bindtap='bindtext' class='text'>{{text}}</text>
+      <text class='text-num'>{{num}}</text>
+    </view>
+  </view>
+  <!-- 默认 -->
+  <view wx:else class='container'>
+    <text bindtap='bindtext' class='text'>{{text}}</text>
+    <text class='text-num'>{{num}}</text>
+  </view>
+</view>

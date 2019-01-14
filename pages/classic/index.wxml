@@ -1,0 +1,22 @@
+<!--pages/classic/index.wxml-->
+<view class='container'>
+  <!-- 头部 -->
+  <view class='header'>
+    <!-- 自定义组件的属性 -->
+    <date-time-cmp class='date-time' index="{{classic.index}}" />
+    <view class='header-right'>
+      <like-cmp bind:likeTap="onLike" like="{{like}}" count="{{count}}" />
+      <image-button-cmp class="share-icon" open-type="share">
+        <image class="share" slot="img" src="/images/icon/share.png" />
+      </image-button-cmp>
+    </view>
+
+  </view>
+  <!-- 内容 -->
+  <movie-cmp wx:if="{{classic.type==100}}" class='movie' image="{{classic.image}}" content="{{classic.content}}" />
+  <music-cmp wx:if="{{classic.type==200}}" class='movie' src="{{classic.url}}" title="{{classic.title}}" image="{{classic.image}}" content="{{classic.content}}" />
+  <essay-cmp wx:if="{{classic.type==300}}" class='movie' image="{{classic.image}}" content="{{classic.content}}" />
+  <!-- 导航切换 -->
+  <navi-cmp class='navi' bind:left="onNext" bind:right="onPrevious" last="{{last}}" first="{{first}}" title="{{classic.title}}" />
+
+</view>

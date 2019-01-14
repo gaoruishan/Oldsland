@@ -1,0 +1,15 @@
+<!--pages/me/likebook/index.wxml-->
+<view class='container'>
+  <!-- 头部 -->
+  <view class='header'>
+    <!-- 自定义组件的属性 -->
+    <date-time-cmp class='date-time' index="{{ index}}" />
+    <like-cmp bind:likeTap="onLike" like="{{like}}" count="{{count}}" />
+  </view>
+  <!-- 内容 -->
+  <movie-cmp wx:if="{{ type==100}}" class='movie' image="{{ image}}" content="{{ content}}" />
+  <music-cmp wx:if="{{ type==200}}" class='movie' src="{{ url}}" title="{{ title}}" image="{{ image}}" content="{{ content}}" />
+  <essay-cmp wx:if="{{ type==300}}" class='movie' image="{{ image}}" content="{{ content}}" />
+  <!-- 导航切换 -->
+  <text class='item-title'>{{ title}}</text>
+</view>

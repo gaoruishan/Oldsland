@@ -1,0 +1,35 @@
+<!--pages/me/index.wxml-->
+<view class='container'>
+  <view class='head'>
+    <image class='head-bg' src='{{mybg}}' />
+    <view class='head-avatar'>
+      <!-- <open-data class='avatar' type="userAvatarUrl" /> -->
+      <!-- <open-data class='avatar' type="userNickName" /> -->
+      <image-button-cmp wx:if="{{!userInfo}}" class='avatar' open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+        <image slot="img" class="avatar" src="/images/my/my.png" />
+      </image-button-cmp>
+      <image wx:if="{{userInfo}}" class="avatar" src="{{userInfo.avatarUrl}}" />
+      <text wx:if="{{userInfo}}">{{userInfo.nickName}}</text>
+    </view>
+    <image bindtap='onStudy' class='course' src='/images/my/study.png' />
+
+    <view class='head-info'>
+      <view bindtap='onAbout' class='about'>
+        <image class='head-about' src='{{about}}' />
+        <text>关于我们</text>
+      </view>
+      <view bindtap='onMyBook' class='about'>
+        <text class='head-about'>{{12}}</text>
+        <text>我的书单</text>
+      </view>
+    </view>
+
+  </view>
+  <image class='like-icon' src='/images/my/like.png' />
+  <view class='book-list'>
+    <block wx:for="{{likeBookList}}">
+      <like-book-cmp book="{{item}}" class="book-item" />
+    </block>
+  </view>
+
+</view>

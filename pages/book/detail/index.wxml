@@ -1,0 +1,61 @@
+<!--pages/book/detail/index.wxml-->
+<wxs src="../../../utils/filter.wxs" module="util" />
+<view class='container'>
+  <!-- 头部 -->
+  <view class='head'>
+    <image class='head-image' src='{{bookDetail.image}}' />
+    <text class='title'>{{bookDetail.title}}</text>
+    <text class='author'>{{bookDetail.author[0]}}</text>
+  </view>
+  <!-- 评论 -->
+  <view class='comments'>
+    <text class='comments-title'>短评</text>
+    <view class='comment-container'>
+      <block wx:for='{{comments}}'>
+        <book-tag-cmp text="{{item.content}}" num="{{'+'+item.nums}}" />
+      </block>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class='content'>
+    <text class='comments-title'>内容简介</text>
+    <text decode="{{true}}" class='content-text'>{{util.format(bookDetail.summary)}}</text>
+  </view>
+  <!-- 书本信息 -->
+  <view class='book-info'>
+    <text class='comments-title'>书本信息</text>
+    <text class='book-info-text'>出版社 {{bookDetail.publisher}}</text>
+    <text class='book-info-text'>出版年 {{bookDetail.pubdate}}</text>
+    <text class='book-info-text'>页数 {{bookDetail.pages}}</text>
+    <text class='book-info-text'>定价 {{bookDetail.price}}</text>
+    <text class='book-info-text'>装帧 {{bookDetail.binding}}</text>
+  </view>
+
+  <view wx:if="{{clicking}}" bindtap='cancelClick' class='mask-bg' />
+  <!-- 底部评论 -->
+  <view class='bottom'>
+    <view class='bottom-left' bindtap='onInputClick'>
+      <image class='bottom-edit' src='{{edit}}' />
+      <input focus='{{clicking}}' placeholder='{{input}}' bindconfirm='inputConfirm' value='{{inputValue}}' class='bottom-input' />
+    </view>
+    <view class='bottom-right'>
+      <like-cmp />
+      <image-button-cmp class="share-icon" open-type="share">
+        <image class="share" slot="img" src="/images/icon/share.png" />
+      </image-button-cmp>
+    </view>
+  </view>
+  <!-- 底部弹框 -->
+  <view wx:if="{{clicking}}" class='bottom-alert'>
+    <view class='bottom-btn'>
+      <text bindtap='cancelClick'>取消</text>
+    </view>
+    <view class='comment-container bottom-comments'>
+      <block wx:for='{{util.limit(comments,5)}}'>
+        <book-tag-cmp bind:text="inputConfirm" text="{{item.content}}" num="{{'+'+item.nums}}" />
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 加载框 -->
+<loading-cmp class="loading-center" wx:if="{{loading}}" />

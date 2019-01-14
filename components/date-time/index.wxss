@@ -1,0 +1,38 @@
+/* components/date-time/index.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 文本对齐 */
+
+.flex-baseline {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.container-index {
+  font-size: 50rpx;
+}
+
+.vertical-line {
+  height: 22px;
+  border-left: 1px solid black;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+
+.month {
+  font-size: 22rpx;
+}
+
+.year {
+  font-size: 22rpx;
+}

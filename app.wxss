@@ -1,0 +1,37 @@
+/**app.wxss**/
+
+/* 全局页面字体设置 */
+
+page {
+  font-style: PingFangSC-Thin;
+  font-size: 16px;
+}
+
+/* 半透明背景 */
+
+.mask-bg {
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+}
+
+/* 一般加载(复制到CSS) */
+
+.loading {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* 中心加载(复制到CSS) */
+
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+}

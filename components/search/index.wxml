@@ -1,0 +1,32 @@
+<!--components/search/index.wxml-->
+<view class='container'>
+  <view class='search-bar'>
+    <view class='search-input'>
+      <image class='icon-search' src="/images/icon/search.png" />
+      <input bindconfirm='onConfirm' value='{{inputValue}}' placeholder='搜索图书名称' auto-focus='ture'></input>
+      <image class='icon-delete' bindtap='onDelete' src="/images/book/delete.png" />
+    </view>
+    <text bindtap='onCancel' class='search-cancel'>取消</text>
+  </view>
+
+  <!-- 书单列表 -->
+  <view wx:if="{{showBook}}" class='book-list'>
+    <block wx:for="{{bookList}}" wx:key="{{id}}">
+      <book-cmp bookModel="{{item}}" />
+    </block>
+  </view>
+</view>
+<!-- 历史记录 -->
+<view wx:if="{{!showBook}}" class='history'>
+  <view class='history-tag'>
+    <view class='tag' />
+    <text>历史搜索</text>
+  </view>
+  <view class='history-list'>
+    <block wx:for="{{history}}" wx:key="1">
+      <book-tag-cmp bind:text="onConfirm" text="{{item}}" />
+    </block>
+  </view>
+</view>
+<!-- 加载框 -->
+<loading-cmp class="loading-center" wx:if="{{loading}}" />

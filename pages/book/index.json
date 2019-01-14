@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "书单",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "book-cmp": "/components/book/index",
+    "search-cmp": "/components/search/index",
+    "loading-cmp":"/components/loading/index"
+  }
+}

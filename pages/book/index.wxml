@@ -1,0 +1,25 @@
+<!--pages/book/index.wxml-->
+<view wx:if="{{!searching}}" class='container'>
+  <view class='header'>
+    <view bindtap='onSearch' class='search-layout'>
+      <image class='icon-search' src="/images/icon/search.png" />
+      <text class='txt-search'>搜索书籍</text>
+    </view>
+  </view>
+  <view class='book-container'>
+    <view class='book-img'>
+      <image src="/images/book/quality.png" />
+    </view>
+    <!-- 书单列表 -->
+    <block wx:for="{{bookList}}" wx:key="{{id}}">
+      <book-cmp class="book-cmp" bookModel="{{item}}" />
+    </block>
+  </view>
+  <!--  最后一页 -->
+<text class='ending' wx:if="{{ending}}">已达最后一页</text>
+</view>
+<!-- 搜索 -->
+<search-cmp bind:cancel="onSearchCancel" wx:if="{{searching}}" />
+<!-- 加载框 -->
+<loading-cmp class="loading-center" wx:if="{{loading}}" />
+<loading-cmp class="loading" wx:if="{{loadMore}}" />

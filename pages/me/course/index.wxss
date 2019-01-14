@@ -1,0 +1,7 @@
+/* pages/me/mybook/index.wxss */
+.container {
+  width: 750rpx;
+  height: 1980rpx;
+  background-size: 100% 100%;
+  /* background-image: url("data:image/png;base64,xxxx"); */
+}
